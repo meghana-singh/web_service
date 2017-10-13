@@ -1,24 +1,49 @@
-# README
+RESTful JSON API With Rails 5
+===================================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API Endpoints:
+==============
 
-Things you may want to cover:
+The API will expose the following RESTful endpoints:
 
-* Ruby version
+POST/add        Addition of two numbers 
 
-* System dependencies
+POST/divide     Division of two numbers
 
-* Configuration
+GET/message     Displays Hello Welcome message 
 
-* Database creation
+GET/date        Displays the current date in GMT
 
-* Database initialization
+Data Format: 
+============
 
-* How to run the test suite
+Data is rendered as JSON
 
-* Services (job queues, cache servers, search engines, etc.)
+Steps to Execute:
+=================
 
-* Deployment instructions
+1. Run the rails server:
+   rails s -p $PORT -b $IP
 
-* ...
+2. Make HTTP request from eg. https://hurl.it
+
+1. http POST<local host address> addend_1=<value> addend_2=<value>
+2. http POST<local host address> dividend=<value> divisor=<value>
+3. http GET<local host address>/message
+4. http GET<local host address>/date
+
+Controller files:
+===================
+
+web_service_elliemae/app/controllers/add_controller.rb
+
+web_service_elliemae/app/controllers/divide_controller.rb
+
+web_service_elliemae/app/controllers/message_controller.rb
+
+web_service_elliemae/app/controllers/date_controller.rb
+
+Router file:
+============
+
+web_service_elliemae/config/routes.rb
