@@ -27,23 +27,22 @@ Steps to Execute:
 
 2. Make HTTP request from eg. https://hurl.it
 
-1. http POST<local host address> addend_1=<value> addend_2=<value>
-2. http POST<local host address> dividend=<value> divisor=<value>
-3. http GET<local host address>/message
-4. http GET<local host address>/date
+1. http POST /add addend_1=<value> addend_2=<value>
+2. http POST /divide  dividend=<value> divisor=<value>
+3. http GET /message
+4. http GET /date
 
 Controller files:
 ===================
+app/controllers/add_controller.rb
 
-web_service_elliemae/app/controllers/add_controller.rb
+app/controllers/divide_controller.rb
 
-web_service_elliemae/app/controllers/divide_controller.rb
+app/controllers/message_controller.rb
 
-web_service_elliemae/app/controllers/message_controller.rb
-
-web_service_elliemae/app/controllers/date_controller.rb
+app/controllers/date_controller.rb
 
 Router file:
 ============
 
-web_service_elliemae/config/routes.rb
+config/routes.rb
